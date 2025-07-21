@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
-import logo from '@/images/logo.png'; // ✅ Correct import based on your path
+import logo from '../images/logo.png';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 
 const Header = () => {
@@ -27,13 +26,12 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo and business name */}
           <div className="flex items-center space-x-3">
-            <Image
-              src={logo} // ✅ Using the imported logo
+            <img
+              src={logo}
               alt="Geer Technical Logo"
               width={50}
               height={50}
               className="rounded-md"
-              priority
             />
             <div>
               <h1 className="text-2xl font-bold text-blue-800">
