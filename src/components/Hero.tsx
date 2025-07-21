@@ -8,10 +8,10 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-black bg-opacity-40"
         style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)',
+          backgroundImage: "url('/images/background.webp')", // ✅ CORRECTED path
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay'
+          backgroundBlendMode: 'overlay',
         }}
       ></div>
 
@@ -55,7 +55,6 @@ const Hero = () => {
               </button>
             </div>
           </div>
-
         </div>
       </div>
 

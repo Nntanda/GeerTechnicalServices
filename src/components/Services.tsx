@@ -1,13 +1,6 @@
 import React from 'react';
 import { 
-  Wrench, 
-  Droplets, 
-  Sun, 
-  Zap, 
-  Wind, 
-  Palette, 
-  Hammer, 
-  RotateCcw 
+  Wrench, Droplets, Sun, Zap, Wind, Palette, Hammer, RotateCcw 
 } from 'lucide-react';
 
 const Services = () => {
@@ -16,49 +9,49 @@ const Services = () => {
       icon: <Wrench className="w-8 h-8" />,
       title: 'Plumbing Services',
       description: 'Professional plumbing installation, repair, and maintenance for residential and commercial properties.',
-      image: 'https://images.pexels.com/photos/8486944/pexels-photo-8486944.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1'
+      image: '/images/OIP.webp'
     },
     {
       icon: <Droplets className="w-8 h-8" />,
       title: 'Irrigation & Drainage',
       description: 'Complete irrigation systems and drainage solutions for gardens, farms, and commercial landscapes.',
-      image: 'https://www.bing.com/images/search?q=Sprinkler+System+for+Garden+Irrigation+in+Uganda&FORM=IRTRRL'
+      image: '/images/irrigation.webp'
     },
     {
       icon: <Sun className="w-8 h-8" />,
       title: 'Solar Water Systems',
       description: 'Eco-friendly solar water heating systems for sustainable and cost-effective hot water solutions.',
-      image: 'https://images.pexels.com/photos/9875436/pexels-photo-9875436.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1'
+      image: '/images/solarWater.webp'
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Electrical Installations',
       description: 'Safe and reliable electrical work including wiring, lighting, and power system installations.',
-      image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1'
+      image: '/images/Electricalinstall.webp'
     },
     {
       icon: <Wind className="w-8 h-8" />,
       title: 'Air Conditioning',
       description: 'HVAC installation, repair, and maintenance for optimal indoor climate control.',
-      image: 'https://images.pexels.com/photos/5698852/pexels-photo-5698852.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1'
+      image: '/images/aircondion.jfif'
     },
     {
       icon: <Palette className="w-8 h-8" />,
       title: 'House Finishes',
       description: 'Quality interior and exterior finishing work including painting, tiling, and decorative elements.',
-      image: 'https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1'
+      image: '/images/housefinishes.webp'
     },
     {
       icon: <Hammer className="w-8 h-8" />,
       title: 'Construction',
       description: 'Complete construction services from foundation to completion for residential and commercial projects.',
-      image: 'https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1'
+      image: '/images/construction.webp'
     },
     {
       icon: <RotateCcw className="w-8 h-8" />,
       title: 'Renovations & Maintenance',
       description: 'Professional renovation services and ongoing maintenance to keep your property in perfect condition.',
-      image: 'https://images.pexels.com/photos/5691621/pexels-photo-5691621.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1'
+      image: '/images/construction.webp'
     }
   ];
 

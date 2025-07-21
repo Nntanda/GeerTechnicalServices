@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone, Mail, Wrench, Zap } from 'lucide-react';
+import Image from 'next/image';
+import logo from '@/images/logo.png'; // ✅ Correct import based on your path
+import { Menu, X, Phone, Mail } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,26 +25,25 @@ const Header = () => {
 
         {/* Main navigation */}
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <div className="flex items-center space-x-3">
-              <div className="relative">
-                <div className="bg-blue-800 p-2 rounded-lg">
-                  <Wrench className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute -bottom-1 -right-1 bg-orange-500 p-1 rounded-full">
-                  <Zap className="w-3 h-3 text-white" />
-                </div>
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-blue-800">
-                  Geer<span className="text-orange-500">Technical</span>
-                </h1>
-                <span className="text-sm text-gray-600 hidden sm:block">Services Ltd</span>
-              </div>
+          {/* Logo and business name */}
+          <div className="flex items-center space-x-3">
+            <Image
+              src={logo} // ✅ Using the imported logo
+              alt="Geer Technical Logo"
+              width={50}
+              height={50}
+              className="rounded-md"
+              priority
+            />
+            <div>
+              <h1 className="text-2xl font-bold text-blue-800">
+                Geer<span className="text-orange-500">Technical</span>
+              </h1>
+              <span className="text-sm text-gray-600 hidden sm:block">Services Ltd</span>
             </div>
           </div>
 
-          {/* Desktop navigation */}
+          {/* Desktop nav */}
           <nav className="hidden md:flex space-x-8">
             <a href="#home" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Home</a>
             <a href="#services" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Services</a>
@@ -50,7 +51,7 @@ const Header = () => {
             <a href="#contact" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Contact</a>
           </nav>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu toggle */}
           <button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -59,7 +60,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile navigation */}
+        {/* Mobile nav */}
         {isMenuOpen && (
           <nav className="md:hidden pb-4">
             <div className="flex flex-col space-y-4">
