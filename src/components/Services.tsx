@@ -45,7 +45,7 @@ const Services = () => {
       icon: <Hammer className="w-8 h-8" />,
       title: 'Construction',
       description: 'Complete construction services from foundation to completion for residential and commercial projects.',
-      image: '/construction.webp'
+      image: '/background.webp'
     },
     {
       icon: <RotateCcw className="w-8 h-8" />,
