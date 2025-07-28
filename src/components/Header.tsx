@@ -15,6 +15,7 @@ const Header = () => {
               <Phone className="w-4 h-4" />
               <span>+256 755 593 320 | +256 787 758 585</span>
             </div>
+            
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
               <span>geertechnicalservices@gmail.com</span>
