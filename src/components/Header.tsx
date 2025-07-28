@@ -13,7 +13,7 @@ const Header = () => {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
-              <span>+256 755 593 320 | +256 787 758 585</span>
+              <span>+256 755 593 320 | +256 787 758 585 | P.O.Box 902190</span>
             </div>
             
             <div className="flex items-center space-x-2">
@@ -70,7 +70,7 @@ const Header = () => {
               <div className="pt-4 border-t border-gray-200">
                 <div className="flex items-center space-x-2 text-sm text-gray-600 mb-2">
                   <Phone className="w-4 h-4" />
-                  <span>+256 755 593 320 | +256 787 758 585</span>
+                  <span>+256 755 593 320 | +256 787 758 585 | P.O.Box 902190</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-gray-600">
                   <Mail className="w-4 h-4" />
