@@ -20,9 +20,10 @@ const About = () => {
                 About <span className="text-orange-500">Geer Technical</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-6">
-                Established as one of Uganda's leading technical services provider, Geer Technical Services 
-                Limited has been delivering exceptional quality and reliability across all sectors 
-                of construction and technical installations.
+                At Geer Technical Services,we are dedicated to providing top Quality plumbing and
+                technical services throughtout Uganda and across borders.With our Expertise and 
+                commitment to exceptional customer service,we aim to be the go-to technical company
+                for residential,commercial,and industrial clients.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Our team of certified professionals combines years of experience with the latest 
