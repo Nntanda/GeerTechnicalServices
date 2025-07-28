@@ -8,7 +8,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-black bg-opacity-40"
         style={{
-          backgroundImage: "url('/images/background.webp')", // ✅ CORRECTED path
+          backgroundImage: "url('/background.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'overlay',
