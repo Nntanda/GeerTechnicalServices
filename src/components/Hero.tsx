@@ -22,7 +22,7 @@ const Hero = () => {
             <div className="space-y-4">
               <h2 className="text-5xl lg:text-6xl font-bold leading-tight">
                 Uganda's Premier 
-                <span className="text-orange-400 block">Technical Services</span>
+                <span className="text-orange-400 block">Technical Services Company</span>
               </h2>
               <p className="text-xl lg:text-2xl text-blue-100 max-w-2xl">
                 From plumbing to solar systems, electrical to construction - we deliver excellence in every project across Uganda.
