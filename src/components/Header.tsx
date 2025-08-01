@@ -40,7 +40,7 @@ const Header = () => {
               <h1 className="text-2xl font-bold text-blue-800">
                 Geer<span className="text-orange-500">Technical</span>
               </h1>
-              <span className="text-sm text-gray-600 hidden sm:block">Services Ltd</span>
+              <span className="text-sm text-gray-600 hidden sm:block">Services Limited</span>
             </div>
           </div>
 
