@@ -23,7 +23,9 @@ const Contact = () => {
     const { firstName, lastName, email, phone, service, message } = formData;
 
     const whatsappMessage = `
-Hello Geer Technical Services,
+Hi there!Welcome to GEER TECH services.We deal in plumbing
+irrigation and drainage,solar and electrical installations,air conditioning,
+construction and house finishes,How may we help you today?,
 
 Name: ${firstName} ${lastName}
 Email: ${email}
@@ -44,7 +46,7 @@ Message: ${message}
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Get In <span className="text-orange-400">Touch</span>
+            Get In <span className="text-orange-400">Touch through Whatsapp</span>
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
             Ready to start your project? Contact us today for a free consultation and quote.
