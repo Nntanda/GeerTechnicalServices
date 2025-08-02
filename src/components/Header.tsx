@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import logo from '@/images/logo.png'; // ✅ Correct import based on your path
+import logo from '@/images/logo.JPEG'; // ✅ Correct import based on your path
 import { Menu, X, Phone, Mail } from 'lucide-react';
 
 const Header = () => {
@@ -39,7 +39,7 @@ const Header = () => {
               <h1 className="text-2xl font-bold text-blue-800">
                 Geer<span className="text-orange-500">Technical</span>
               </h1>
-              <span className="text-sm text-gray-600 hidden sm:block">Services Ltd</span>
+              <span className="text-sm text-gray-600 hidden sm:block">Services Limited</span>
             </div>
           </div>
 
