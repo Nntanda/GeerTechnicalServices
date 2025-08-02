@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import Image from 'next/image';
 import logo from '@/images/logo.JPEG'; // ✅ Correct import based on your path
+=======
+import logo from '/logo.JPEG';
+>>>>>>> 042ee7d61a20d5aef8c12da6661d4bfc05248cc1
 import { Menu, X, Phone, Mail } from 'lucide-react';
 
 const Header = () => {
@@ -17,6 +21,9 @@ const Header = () => {
               <span>+256 755 593 320 | +256 787 758 585</span>
             </div>
             <div className="flex items-center space-x-2">
+              <span>P.O.Box 902190</span>
+            </div>
+            <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
               <span>geertechnicalservices@gmail.com</span>
             </div>
@@ -27,13 +34,12 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo and business name */}
           <div className="flex items-center space-x-3">
-            <Image
-              src={logo} // ✅ Using the imported logo
+            <img
+              src={logo}
               alt="Geer Technical Logo"
               width={50}
               height={50}
               className="rounded-md"
-              priority
             />
             <div>
               <h1 className="text-2xl font-bold text-blue-800">
@@ -72,6 +78,9 @@ const Header = () => {
                 <div className="flex items-center space-x-2 text-sm text-gray-600 mb-2">
                   <Phone className="w-4 h-4" />
                   <span>+256 755 593 320 | +256 787 758 585</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-600 mb-2">
+                  <span>P.O.Box 902190</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-gray-600">
                   <Mail className="w-4 h-4" />

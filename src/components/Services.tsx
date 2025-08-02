@@ -9,49 +9,49 @@ const Services = () => {
       icon: <Wrench className="w-8 h-8" />,
       title: 'Plumbing Services',
       description: 'Professional plumbing installation, repair, and maintenance for residential and commercial properties.',
-      image: '/images/OIP.webp'
+      image: '/OIP.webp'
     },
     {
       icon: <Droplets className="w-8 h-8" />,
       title: 'Irrigation & Drainage',
       description: 'Complete irrigation systems and drainage solutions for gardens, farms, and commercial landscapes.',
-      image: '/images/irrigation.webp'
+      image: '/irrigation.webp'
     },
     {
       icon: <Sun className="w-8 h-8" />,
       title: 'Solar Water Systems',
       description: 'Eco-friendly solar water heating systems for sustainable and cost-effective hot water solutions.',
-      image: '/images/solarWater.webp'
+      image: '/solarWater.webp'
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Electrical Installations',
       description: 'Safe and reliable electrical work including wiring, lighting, and power system installations.',
-      image: '/images/Electricalinstall.webp'
+      image: '/Electricalinstall.webp'
     },
     {
       icon: <Wind className="w-8 h-8" />,
       title: 'Air Conditioning',
       description: 'HVAC installation, repair, and maintenance for optimal indoor climate control.',
-      image: '/images/aircondion.jfif'
+      image: '/aircondion.jfif'
     },
     {
       icon: <Palette className="w-8 h-8" />,
       title: 'House Finishes',
       description: 'Quality interior and exterior finishing work including painting, tiling, and decorative elements.',
-      image: '/images/housefinishes.webp'
+      image: '/housefinishes.webp'
     },
     {
       icon: <Hammer className="w-8 h-8" />,
       title: 'Construction',
       description: 'Complete construction services from foundation to completion for residential and commercial projects.',
-      image: '/images/construction.webp'
+      image: '/background.webp'
     },
     {
       icon: <RotateCcw className="w-8 h-8" />,
       title: 'Renovations & Maintenance',
       description: 'Professional renovation services and ongoing maintenance to keep your property in perfect condition.',
-      image: '/images/construction.webp'
+      image: '/construction.webp'
     }
   ];
 

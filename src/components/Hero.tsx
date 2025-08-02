@@ -8,7 +8,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-black bg-opacity-40"
         style={{
-          backgroundImage: "url('/images/background.webp')", // ✅ CORRECTED path
+          backgroundImage: "url('/background.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'overlay',
@@ -22,10 +22,10 @@ const Hero = () => {
             <div className="space-y-4">
               <h2 className="text-5xl lg:text-6xl font-bold leading-tight">
                 Uganda's Premier 
-                <span className="text-orange-400 block">Technical Services</span>
+                <span className="text-orange-400 block">Technical Services Company</span>
               </h2>
               <p className="text-xl lg:text-2xl text-blue-100 max-w-2xl">
-                From plumbing to solar systems, electrical to construction - we deliver excellence in every project across Uganda.
+                From plumbing to solar systems, electrical to construction - we deliver excellence in every project in Uganda  and across borders.
               </p>
             </div>
 
