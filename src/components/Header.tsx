@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import Image from 'next/image';
-import logo from '@/images/logo.JPEG'; // ✅ Correct import based on your path
-=======
 import logo from '/logo.JPEG';
->>>>>>> 042ee7d61a20d5aef8c12da6661d4bfc05248cc1
 import { Menu, X, Phone, Mail } from 'lucide-react';
 
 const Header = () => {
