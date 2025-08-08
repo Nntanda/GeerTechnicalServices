@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '/logo.JPEG';
+import logo from '/logo.jpeg';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 
 const Header = () => {
