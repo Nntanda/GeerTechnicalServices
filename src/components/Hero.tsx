@@ -25,7 +25,7 @@ const Hero = () => {
                 <span className="text-orange-400 block">Technical Services Company</span>
               </h2>
               <p className="text-xl lg:text-2xl text-blue-100 max-w-2xl">
-                From plumbing to solar systems, electrical to construction - we deliver excellence in every project in Uganda  and across borders.
+                From plumbing to Irrigation and drainage,construction,solar to electrical installations - we deliver excellence in every project in Uganda  and across borders.
               </p>
             </div>
 
