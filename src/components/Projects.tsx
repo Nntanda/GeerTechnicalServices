@@ -51,7 +51,7 @@ const Projects = () => {
       id: 7,
       image: '/image7.jpeg',
       title: 'House Finishing Work',
-      category: 'Finishes'
+      category: 'Finishes',
       description:'Quality interior and exterior finishing with attention to detail.'
     },
     {
