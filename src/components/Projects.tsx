@@ -8,23 +8,23 @@ const Projects = () => {
     {
       id: 1,
       image: '/image1.jpeg',
-      title: 'Residential Plumbing Installation',
-      category: 'Plumbing',
-      description: 'Complete plumbing system installation for a modern residential property.'
+      title: 'Residential Constrution Finishes',
+      category: 'Construction',
+      description: 'House Finishes for a modern residential property.'
     },
     {
       id: 2,
       image: '/image2.jpeg',
-      title: 'Commercial Electrical Work',
-      category: 'Electrical',
-      description: 'Professional electrical installation and wiring for commercial building.'
+      title: 'Drainage and Plumbing',
+      category: 'Plumbing',
+      description: 'Professional Drainage and Plumbing for commercial building and residentials'
     },
     {
       id: 3,
       image: '/image3.jpeg',
-      title: 'Solar Water System',
-      category: 'Solar',
-      description: 'Eco-friendly solar water heating system installation.'
+      title: 'Drainage System',
+      category: 'Drainage',
+      description: 'Eco-friendly Drainage system installation for Residential houses'
     },
     {
       id: 4,
