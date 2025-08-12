@@ -54,13 +54,7 @@ const Projects = () => {
       category: 'Finishes',
       description:'Quality interior and exterior finishing with attention to detail.'
     },
-    {
-      id: 8,
-      image: '/image8.jpeg',
-      title: 'Renovation & Maintenance',
-      category: 'Renovation',
-      description: 'Professional renovation and maintenance services.'
-    },
+
     {
       id: 9,
       image: '/image9.jpeg',
