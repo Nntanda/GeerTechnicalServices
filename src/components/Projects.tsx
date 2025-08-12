@@ -29,16 +29,16 @@ const Projects = () => {
     {
       id: 4,
       image: '/image4.jpeg',
-      title: 'Irrigation System Setup',
-      category: 'Irrigation',
-      description: 'Advanced irrigation system for agricultural and landscaping needs.'
+      title: 'Plumbing',
+      category: 'Plumbing',
+      description: 'Advanced plumbing system for residentials.'
     },
     {
       id: 5,
       image: '/image5.jpeg',
-      title: 'Air Conditioning Installation',
-      category: 'HVAC',
-      description: 'Professional HVAC system installation for optimal climate control.'
+      title: 'Drainage system installation',
+      category: 'Drainage',
+      description: 'Eco-friendly Drainage system installation for Residential houses'
     },
     {
       id: 6,
@@ -50,9 +50,8 @@ const Projects = () => {
     {
       id: 7,
       image: '/image7.jpeg',
-      title: 'Construction Project',
-      category: 'Construction',
-      description: 'Complete construction project from foundation to completion.'
+      title: 'House Finishing Work',
+      category: 'Quality interior and exterior finishing with attention to detail.'
     },
     {
       id: 8,
@@ -64,9 +63,9 @@ const Projects = () => {
     {
       id: 9,
       image: '/image9.jpeg',
-      title: 'Drainage System',
-      category: 'Drainage',
-      description: 'Efficient drainage system installation and maintenance.'
+      title: 'Construction site',
+      category: 'Construction',
+      description: 'Complete construction project from foundation to completion.'
     }
   ];
 
@@ -106,7 +105,7 @@ const Projects = () => {
             Our <span className="text-orange-500">Projects</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Explore our portfolio of completed projects across Uganda. From residential to commercial, 
+            Explore our portfolio of completed projects across Uganda and outside . From residential to commercial, 
             we deliver excellence in every project we undertake.
           </p>
           
@@ -234,7 +233,7 @@ const Projects = () => {
                 href="#contact"
                 className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-block"
               >
-                Get Free Quote
+                Get Free Quote by contacting Us
               </a>
               <a
                 href="https://wa.me/256755593320?text=Hello%20Geer%20Technical%20Services,%20I%20would%20like%20to%20discuss%20a%20project."
