@@ -1,58 +1,74 @@
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, ShieldCheck } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
+    <section id="home" className="relative isolate overflow-hidden bg-blue-950 text-white">
       {/* Background image overlay */}
       <div 
-        className="absolute inset-0 bg-black bg-opacity-40"
+        className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-950/30"
         style={{
           backgroundImage: "url('/background.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay',
         }}
       ></div>
 
-      <div className="relative container mx-auto px-4 py-20 lg:py-28">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative container mx-auto px-4 py-20 sm:py-24 lg:py-32">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
           {/* Left content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-5xl lg:text-6xl font-bold leading-tight">
+          <div className="max-w-3xl space-y-8">
+            <div className="space-y-6">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-orange-200 backdrop-blur">
+                <span className="h-2 w-2 rounded-full bg-orange-400"></span>
+                Trusted technical experts in Uganda
+              </span>
+              <h2 className="text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
                 Uganda's Premier 
-                <span className="text-orange-400 block">Technical Services Company</span>
+                <span className="mt-2 block text-orange-400">Technical Services Company</span>
               </h2>
-              <p className="text-xl lg:text-2xl text-blue-100 max-w-2xl">
-                From plumbing to Irrigation and drainage,construction,solar to electrical installations - we deliver excellence in every project in Uganda  and across borders.
+              <p className="max-w-2xl text-lg leading-8 text-blue-100 sm:text-xl">
+                From plumbing and drainage to construction, solar, and electrical installations, we bring dependable expertise to every project.
               </p>
             </div>
 
             {/* Key benefits */}
-            <div className="space-y-3">
+            <div className="grid gap-3 sm:grid-cols-2">
               {[
                 'Licensed & Certified Professionals',
                 '24/7 Emergency Services Available',
                 'Quality Guarantee on All Work',
                 'Serving All Regions of Uganda'
               ].map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                  <span className="text-lg">{benefit}</span>
+                <div key={index} className="flex items-center gap-3 text-sm font-medium text-blue-50 sm:text-base">
+                  <CheckCircle className="h-5 w-5 flex-shrink-0 text-orange-400" />
+                  <span>{benefit}</span>
                 </div>
               ))}
             </div>
 
             {/* CTA buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center space-x-2 group">
+            <div className="flex flex-col gap-4 pt-2 sm:flex-row">
+              <a href="#contact" className="group inline-flex items-center justify-center gap-2 rounded-xl bg-orange-500 px-7 py-4 text-base font-bold text-white shadow-lg shadow-orange-950/30 transition hover:-translate-y-0.5 hover:bg-orange-600 sm:text-lg">
                 <span>Get Free Quote</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a href="#services" className="inline-flex items-center justify-center rounded-xl border border-white/40 bg-white/5 px-7 py-4 text-base font-bold text-white transition hover:bg-white hover:text-blue-950 sm:text-lg">
                 View Our Services
-              </button>
+              </a>
+            </div>
+          </div>
+
+          <div className="hidden justify-end lg:flex">
+            <div className="max-w-sm rounded-2xl border border-white/15 bg-blue-950/55 p-7 shadow-2xl backdrop-blur-md">
+              <div className="mb-6 inline-flex rounded-xl bg-orange-500 p-3 text-white shadow-lg shadow-orange-950/30">
+                <ShieldCheck className="h-7 w-7" />
+              </div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-200">Built on trust</p>
+              <p className="mt-3 text-2xl font-bold leading-snug">Quality workmanship, from the first call to project handover.</p>
+              <a href="#projects" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-100 transition hover:text-orange-300">
+                See our recent work <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>

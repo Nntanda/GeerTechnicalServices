@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, type ChangeEvent, type FormEvent } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 
 const Contact = () => {
@@ -11,14 +11,14 @@ const Contact = () => {
     message: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { firstName, lastName, email, phone, service, message } = formData;
 
@@ -38,48 +38,49 @@ Message: ${message}
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-    window.open(whatsappURL, '_blank');
+    window.open(whatsappURL, '_blank', 'noopener,noreferrer');
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+    <section id="contact" className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 py-20 text-white sm:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Get In <span className="text-orange-400">Touch through Whatsapp</span>
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-orange-300">We're ready to help</p>
+          <h2 className="mb-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            Get In <span className="text-orange-400">Touch</span>
           </h2>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-lg leading-8 text-blue-100">
             Ready to start your project? Contact us today for a free consultation and quote.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-500 p-3 rounded-lg">
+              <h3 className="mb-6 text-2xl font-bold">Contact Information</h3>
+              <div className="space-y-5">
+                <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <div className="rounded-xl bg-orange-500 p-3 shadow-lg shadow-orange-950/20">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Phone Numbers</h4>
-                    <p className="text-blue-100">+256 755 593 320</p>
-                    <p className="text-blue-100">+256 787 758 585</p>
+                    <h4 className="mb-1 font-semibold">Phone Numbers</h4>
+                    <a href="tel:+256755593320" className="block text-blue-100 transition hover:text-white">+256 755 593 320</a>
+                    <a href="tel:+256787758585" className="block text-blue-100 transition hover:text-white">+256 787 758 585</a>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-500 p-3 rounded-lg">
+                <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <div className="rounded-xl bg-orange-500 p-3 shadow-lg shadow-orange-950/20">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Email</h4>
-                    <p className="text-blue-100">geertechnicalservices@gmail.com</p>
+                    <h4 className="mb-1 font-semibold">Email</h4>
+                    <a href="mailto:geertechnicalservices@gmail.com" className="break-all text-blue-100 transition hover:text-white">geertechnicalservices@gmail.com</a>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-500 p-3 rounded-lg">
+                <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <div className="rounded-xl bg-orange-500 p-3 shadow-lg shadow-orange-950/20">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
@@ -88,8 +89,8 @@ Message: ${message}
                     <p className="text-blue-100">Jinja City, Uganda</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-500 p-3 rounded-lg">
+                <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <div className="rounded-xl bg-orange-500 p-3 shadow-lg shadow-orange-950/20">
                     <Clock className="w-6 h-6" />
                   </div>
                   <div>
@@ -102,8 +103,8 @@ Message: ${message}
               </div>
             </div>
 
-            <div className="bg-blue-800 p-6 rounded-xl">
-              <h4 className="text-xl font-semibold mb-3">Emergency Services</h4>
+            <div className="rounded-2xl border border-white/10 bg-blue-950/50 p-6">
+              <h4 className="mb-3 text-xl font-bold">Emergency Services</h4>
               <p className="text-blue-100 mb-4">
                 We provide 24/7 emergency services for urgent plumbing, electrical, and other critical issues.
               </p>
@@ -111,7 +112,7 @@ Message: ${message}
                 href="https://wa.me/256755593320?text=Hello%20Geer%20Technical%20Services,%20I%20need%20emergency%20assistance."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-green-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                className="inline-flex items-center rounded-xl bg-green-500 px-6 py-3 font-bold text-white transition-colors hover:bg-green-600"
               >
                 Contact via WhatsApp
               </a>
@@ -119,79 +120,85 @@ Message: ${message}
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white text-gray-900 p-8 rounded-2xl shadow-xl">
-            <h3 className="text-2xl font-semibold mb-6">Send Us a Message</h3>
+          <div className="rounded-3xl bg-white p-6 text-slate-900 shadow-2xl shadow-blue-950/20 sm:p-8">
+            <h3 className="mb-2 text-2xl font-extrabold">Send Us a Message</h3>
+            <p className="mb-6 text-sm text-slate-500">Share a few details and we’ll help you get started.</p>
 
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="firstName" className="mb-2 block text-sm font-semibold text-slate-700">
                     First Name *
                   </label>
                   <input 
                     name="firstName"
+                    id="firstName"
                     type="text" 
                     required
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-4 focus:ring-orange-100"
                     placeholder="John"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="lastName" className="mb-2 block text-sm font-semibold text-slate-700">
                     Last Name *
                   </label>
                   <input 
                     name="lastName"
+                    id="lastName"
                     type="text" 
                     required
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-4 focus:ring-orange-100"
                     placeholder="Doe"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="mb-2 block text-sm font-semibold text-slate-700">
                   Email *
                 </label>
                 <input 
                   name="email"
+                  id="email"
                   type="email" 
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-4 focus:ring-orange-100"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="phone" className="mb-2 block text-sm font-semibold text-slate-700">
                   Phone Number
                 </label>
                 <input 
                   name="phone"
+                  id="phone"
                   type="tel" 
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-4 focus:ring-orange-100"
                   placeholder="+256 700 000 000"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="service" className="mb-2 block text-sm font-semibold text-slate-700">
                   Service Needed
                 </label>
                 <select 
                   name="service"
+                  id="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-4 focus:ring-orange-100"
                 >
                   <option value="">Select a service</option>
                   <option>Plumbing</option>
@@ -206,23 +213,24 @@ Message: ${message}
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="mb-2 block text-sm font-semibold text-slate-700">
                   Message *
                 </label>
                 <textarea 
                   name="message"
+                  id="message"
                   rows={4}
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="w-full resize-y rounded-xl border border-slate-200 px-4 py-3 outline-none transition focus:border-orange-400 focus:ring-4 focus:ring-orange-100"
                   placeholder="Tell us about your project..."
                 ></textarea>
               </div>
 
               <button 
                 type="submit"
-                className="w-full bg-green-800 hover:bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center space-x-2"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-green-600 px-8 py-4 text-lg font-bold text-white shadow-lg shadow-green-900/20 transition hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
                 <span>Send to WhatsApp</span>
                 <Send className="w-5 h-5" />
@@ -233,9 +241,9 @@ Message: ${message}
 
         {/* Map Section */}
         <div className="lg:col-span-2 mt-16">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="p-6 bg-blue-800 text-white">
-              <h3 className="text-2xl font-semibold mb-2">Find Us</h3>
+          <div className="overflow-hidden rounded-3xl bg-white shadow-2xl shadow-blue-950/20">
+            <div className="bg-blue-950 p-6 text-white">
+              <h3 className="mb-2 text-2xl font-bold">Find Us</h3>
               <p className="text-blue-100">Visit our office in Jinja City for consultations and project discussions</p>
             </div>
             <div className="h-96">
@@ -250,8 +258,8 @@ Message: ${message}
                 title="Geer Technical Services Location - Main Street East, Jinja City"
               ></iframe>
             </div>
-            <div className="p-6 bg-gray-50">
-              <div className="flex items-center justify-between">
+            <div className="bg-slate-50 p-6">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Office Address</h4>
                   <p className="text-gray-600">Main Street East, Jinja City, Uganda</p>
@@ -260,7 +268,7 @@ Message: ${message}
                   href="https://www.google.com/maps/search/Main+Street+East,+Jinja+City,+Uganda"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+                  className="rounded-xl bg-blue-950 px-5 py-3 text-center font-semibold text-white transition-colors hover:bg-orange-600"
                 >
                   Get Directions
                 </a>

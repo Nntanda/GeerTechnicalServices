@@ -1,137 +1,105 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin, Wrench, Zap } from 'lucide-react';
+import { ArrowUpRight, Mail, MapPin, Phone, Wrench } from 'lucide-react';
 
 const Footer = () => {
+  const services = [
+    'Plumbing Services',
+    'Irrigation & Drainage',
+    'Solar Water Systems',
+    'Electrical Installations',
+    'Air Conditioning',
+    'House Finishes',
+    'Construction',
+    'Renovations & Maintenance',
+  ];
+
+  const quickLinks = [
+    { label: 'About Us', href: '#about' },
+    { label: 'Our Services', href: '#services' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Community Impact', href: '#community' },
+    { label: 'Contact Us', href: '#contact' },
+    { label: 'Get a Quote', href: '#contact' },
+  ];
+
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-slate-950 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-6">
-            <div>
-              <div className="flex items-center space-x-3 mb-2">
-                <div className="relative">
-                  <div className="bg-blue-800 p-2 rounded-lg">
-                    <Wrench className="w-5 h-5 text-white" />
-                  </div>
-                    <p className="text-gray-300">Main Street East</p>
-                    <p className="text-gray-300">Jinja City, Uganda</p>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">
-                    Geer<span className="text-orange-500">Technical</span>
-                  </h3>
-                  <p className="text-gray-400 text-sm">Services Limited</p>
-                </div>
-              </div>
-            </div>
-            <p className="text-gray-300 leading-relaxed">
-              Uganda's premier technical services company, delivering quality solutions 
-              for all your construction and maintenance needs.
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1.1fr]">
+          <div>
+            <a href="#home" className="mb-5 inline-flex items-center gap-3">
+              <span className="rounded-xl bg-orange-500 p-3 text-white">
+                <Wrench className="h-5 w-5" />
+              </span>
+              <span>
+                <span className="block text-xl font-extrabold tracking-tight">
+                  Geer<span className="text-orange-400">Technical</span>
+                </span>
+                <span className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">Services Limited</span>
+              </span>
+            </a>
+            <p className="max-w-sm leading-7 text-slate-400">
+              Uganda's premier technical services company, delivering quality solutions for all your construction and maintenance needs.
             </p>
+            <a href="#contact" className="mt-6 inline-flex items-center gap-2 font-semibold text-orange-400 transition hover:text-orange-300">
+              Start a project <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
 
-
-          {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
+            <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.16em] text-white">Our Services</h4>
             <ul className="space-y-3">
-              {[
-                'Plumbing Services',
-                'Irrigation & Drainage',
-                'Solar Water Systems',
-                'Electrical Installations',
-                'Air Conditioning',
-                'House Finishes',
-                'Construction',
-                'Renovations & Maintenance'
-              ].map((service, index) => (
-                <li key={index}>
-                  <a href="#" className="text-gray-300 hover:text-orange-500 transition-colors">
-                    {service}
-                  </a>
+              {services.map((service) => (
+                <li key={service}>
+                  <a href="#services" className="text-sm text-slate-400 transition hover:text-orange-300">{service}</a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
+            <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.16em] text-white">Explore</h4>
             <ul className="space-y-3">
-              {[
-                'About Us',
-                'Our Services',
-                'Contact Us',
-                'Emergency Services',
-                'Get Quote',
-                
-              ].map((link, index) => (
-                <li key={index}>
-                  <a href="#" className="text-gray-300 hover:text-orange-500 transition-colors">
-                    {link}
-                  </a>
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm text-slate-400 transition hover:text-orange-300">{link.label}</a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-300">Clive Road,Jinja East</p>
-                  <p className="text-gray-300">Jinja , Uganda</p>
-                </div>
+            <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.16em] text-white">Get in touch</h4>
+            <div className="space-y-5">
+              <div className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-orange-400" />
+                <p className="text-sm leading-6 text-slate-400">Clive Road, Jinja East<br />Jinja, Uganda</p>
               </div>
-              
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-300">+256 755 593 320 </p>
-                  <p className="text-gray-300">+256 787 758 585</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-300">geertechnicalservices@gmail.com</p>
-                </div>
-              </div>
+              <a href="tel:+256755593320" className="flex items-start gap-3 text-sm text-slate-400 transition hover:text-white">
+                <Phone className="h-5 w-5 flex-shrink-0 text-orange-400" />
+                <span>+256 755 593 320<br />+256 787 758 585</span>
+              </a>
+              <a href="mailto:geertechnicalservices@gmail.com" className="flex items-start gap-3 text-sm text-slate-400 transition hover:text-white">
+                <Mail className="h-5 w-5 flex-shrink-0 text-orange-400" />
+                <span className="break-all">geertechnicalservices@gmail.com</span>
+              </a>
             </div>
-
-            <div className="mt-6 p-4 bg-orange-500 rounded-lg">
-              <h5 className="font-semibold mb-1">24/7 Emergency</h5>
-              <p className="text-sm text-orange-100">Call us anytime for urgent repairs</p>
-              <p className="text-sm text-orange-100">On our contacts or contact us Via whatsapp</p>
-            </div>
+            <a
+              href="https://wa.me/256755593320"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex rounded-xl bg-green-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-green-700"
+            >
+              24/7 Emergency WhatsApp
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
-              © 2025 Geer Technical Services Limited. All rights reserved.
-            </p>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                Designed By
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                Ntanda Nasser 
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                0765802925
-              </a>
-            </div>
-          </div>
+      <div className="border-t border-white/10">
+        <div className="container mx-auto flex flex-col gap-3 px-4 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Geer Technical Services Limited. All rights reserved.</p>
+          <a href="#home" className="font-medium transition hover:text-orange-300">Back to top ↑</a>
         </div>
       </div>
     </footer>
